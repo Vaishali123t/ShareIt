@@ -14,7 +14,7 @@ const Users=()=>{
             try{
                 const responseData=await sendRequest(`${process.env.REACT_APP_BACKEND_URL}/api/users`);
                 setLoadedUsers(responseData.users);
-                console.log(responseData.users);
+
             }catch(err){}
         }
         fetchUsers();

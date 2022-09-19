@@ -58,7 +58,10 @@ const NewPlace = () => {
       await sendRequest(
         `${process.env.REACT_APP_BACKEND_URL}/api/places`,
         "POST",
-        formData
+        formData,
+        {
+          Authorization: 'BEARER '+auth.token
+        }
       );
 
       // redirect user to a diff page

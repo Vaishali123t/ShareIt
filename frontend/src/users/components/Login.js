@@ -71,7 +71,6 @@ const Login = (props) => {
             }
           );
           const responseData = await response.json();
-          console.log(responseData);
         } catch (err) {
           console.log(err);
         }

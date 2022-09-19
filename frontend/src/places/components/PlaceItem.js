@@ -35,7 +35,9 @@ const onConfirmDelHandler= async ()=>{
   try{
     await sendRequest(
       `${process.env.REACT_APP_BACKEND_URL}/api/places/${props.id}`,
-      "DELETE"
+      "DELETE",
+      null,
+      { Authorization: "BEARER " + auth.token }
     );
     props.onDelete(props.id); 
   }catch(err){}
